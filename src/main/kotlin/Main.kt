@@ -1,16 +1,26 @@
 fun main() {
     val numbers = listOf(1, 2, 4, 7, 13, 9, 23)
 
-    // map applies the isPrime function to each element of the list
-    val result = numbers.map { isPrime(it) }
+    val results = numbers.map { isPrime(it) }
 
-    println("Numbers: $numbers")
-    println("Are they prime?: $result")
+    println(results.joinToString(prefix = "(", separator = ", ", postfix = ")"))
 }
 
-/*
-TODO: Function that checks if a number is prime
- */
 fun isPrime(n: Int): Boolean {
-    return true;
+    if (n == 2) {
+        return false }
+
+    if (n < 1) {
+        return false
+    }
+    if (n == 1) {
+        return true }
+    var i = 2
+    while (i * i <= n) {
+        if (n % i == 0) {
+            return false
+        }
+        i++
+    }
+    return true
 }
