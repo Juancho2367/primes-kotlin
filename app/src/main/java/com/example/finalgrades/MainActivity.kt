@@ -42,7 +42,7 @@ class MainActivity : AppCompatActivity() {
             nota1.text.clear()
             nota2.text.clear()
             nota3.text.clear()
-            txtResultado.text = ""
+            txtResultado.text = "Calcula tus otras notas"
         }
 
         }
